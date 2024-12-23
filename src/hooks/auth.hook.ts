@@ -1,10 +1,10 @@
 import { useMutation } from "@tanstack/react-query";
 import { FieldValues } from "react-hook-form";
-import { toast } from "sonner";
 import {
   loginUser,
   registerUser,
 } from "../components/services/service/AuthService";
+import { toast } from "sonner";
 
 export const useUserRegistration = () => {
   return useMutation<any, Error, FieldValues>({

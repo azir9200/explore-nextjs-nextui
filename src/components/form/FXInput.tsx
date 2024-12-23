@@ -1,41 +1,42 @@
+/* eslint-disable react/jsx-sort-props */
+/* eslint-disable prettier/prettier */
 "use client";
 
-import { ReactNode } from "react";
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import { Input } from "@nextui-org/input";
+import { useFormContext } from "react-hook-form";
 
-interface formConfig {
-  defaultValues?: Record<string, any>;
-  resolver?: any;
+interface IProps {
+  variant?: "flat" | "bordered" | "faded" | "underlined";
+  size?: "sm" | "md" | "lg";
+  required?: boolean;
+  type?: string;
+  label: string;
+  name: string;
 }
 
-interface IProps extends formConfig {
-  children: ReactNode;
-  onSubmit: SubmitHandler<any>;
-}
-
-export default function FXForm({
-  children,
-  onSubmit,
-  defaultValues,
-  resolver,
+export default function FXInput({
+  variant = "bordered",
+  size = "md",
+  required = false,
+  type = "text",
+  label,
+  name,
 }: IProps) {
-  const formConfig: formConfig = {};
-
-  if (!!defaultValues) {
-    formConfig["defaultValues"] = defaultValues;
-  }
-
-  if (!!resolver) {
-    formConfig["resolver"] = resolver;
-  }
-
-  const methods = useForm(formConfig);
-
-  const submitHandler = methods.handleSubmit;
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
-    <FormProvider {...methods}>
-      <form onSubmit={submitHandler(onSubmit)}>{children}</form>
-    </FormProvider>
+    <Input
+      {...register(name)}
+      errorMessage={errors[name] ? (errors[name].message as string) : ""}
+      isInvalid={!!errors[name]}
+      variant={variant}
+      size={size}
+      required={required}
+      type={type}
+      label={label}
+    />
   );
 }

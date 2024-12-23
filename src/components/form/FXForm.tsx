@@ -10,12 +10,12 @@ interface formConfig {
 
 interface IProps extends formConfig {
   children: ReactNode;
-  onSubmit: SubmitHandler<any>;
+  onSubmitAction: SubmitHandler<any>;
 }
 
 export default function FXForm({
   children,
-  onSubmit,
+  onSubmitAction,
   defaultValues,
   resolver,
 }: IProps) {
@@ -35,7 +35,7 @@ export default function FXForm({
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={submitHandler(onSubmit)}>{children}</form>
+      <form onSubmit={submitHandler(onSubmitAction)}>{children}</form>
     </FormProvider>
   );
 }

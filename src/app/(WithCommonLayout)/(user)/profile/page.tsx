@@ -1,9 +1,7 @@
-const page = () => {
+export default function page() {
   return (
     <div>
-      <p>Profile page is rendering here page</p>
+      <h1> Profile </h1>
     </div>
   );
-};
-
-export default page;
+}

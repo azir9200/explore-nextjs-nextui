@@ -1,17 +1,20 @@
 "use server";
 
-import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
 import { jwtDecode } from "jwt-decode";
-import axiosInstance from "../../lib/AxiosInstance";
+import axiosInstance from "../../../lib/AxiosInstance";
+import Cookies from "js-cookie";
+import { cookies } from "next/headers";
 
 export const registerUser = async (userData: FieldValues) => {
   try {
-    const { data } = await axiosInstance.post("/auth/register", userData);
+    const { data } = await axiosInstance.post("/user/register", userData);
+
+    console.log("register  new user", data);
 
     if (data.success) {
-      cookies().set("accessToken", data?.data?.accessToken);
-      cookies().set("refreshToken", data?.data?.refreshToken);
+      (await cookies()).set("accessToken", data?.data?.accessToken);
+      (await cookies()).set("refreshToken", data?.data?.refreshToken);
     }
 
     return data;
@@ -20,41 +23,36 @@ export const registerUser = async (userData: FieldValues) => {
   }
 };
 
+// Login service
 export const loginUser = async (userData: FieldValues) => {
   try {
     const { data } = await axiosInstance.post("/auth/login", userData);
 
     if (data.success) {
-      cookies().set("accessToken", data?.data?.accessToken);
-      cookies().set("refreshToken", data?.data?.refreshToken);
+      (await cookies()).set("accessToken", data?.data?.accessToken);
     }
 
     return data;
   } catch (error: any) {
-    throw new Error(error);
+    throw new Error(error?.response?.data?.message);
   }
 };
 
-export const logout = async () => {
-  cookies().delete("accessToken");
-  cookies().delete("refreshToken");
-};
-
 export const getCurrentUser = async () => {
-  const accessToken = cookies().get("accessToken")?.value;
+  const accessToken = Cookies.get("accessToken");
 
   let decodedToken = null;
 
   if (accessToken) {
     decodedToken = await jwtDecode(accessToken);
+
     return {
       _id: decodedToken._id,
       name: decodedToken.name,
       email: decodedToken.email,
-      mobileNumber: decodedToken.mobileNumber,
+      phone: decodedToken.phone,
       role: decodedToken.role,
-      status: decodedToken.status,
-      profilePhoto: decodedToken.profilePhoto,
+      address: decodedToken.address,
     };
   }
 
