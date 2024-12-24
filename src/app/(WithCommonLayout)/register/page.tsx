@@ -31,7 +31,7 @@ export default function RegisterPage() {
           defaultValues={{
             name: "First User",
             email: "user001@gmail.com",
-            phone: "01711223344",
+            phone: "011223344",
             address: "New Road, ire",
             role: "user",
             password: "123456",

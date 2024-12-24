@@ -18,25 +18,15 @@ import Loading from "@/src/components/UI/Loading";
 const LoginPage = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  // const { setIsLoading: userLoading } = useUser();
+  const { setIsLoading: userLoading } = useUser();
 
   const redirect = searchParams.get("redirect");
 
   const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     handleUserLogin(data);
-    // userLoading(true);
+    userLoading(true);
   };
-
-  // const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-  //   const userData = {
-  //     ...data,
-  //   };
-
-  //   console.log("Inside form user data: ", userData);
-
-  //   loginUser(userData);
-  // };
 
   useEffect(() => {
     if (!isPending && isSuccess) {

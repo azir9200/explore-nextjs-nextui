@@ -9,11 +9,19 @@ import { adminLinks, userLinks } from "./constants";
 import { useUser } from "@/src/context/user.provider";
 
 const Sidebar = () => {
+  const { user } = useUser();
+
   return (
     <div>
       <div className="rounded-xl bg-default-100 p-2">
         <div className="h-[330px] w-full rounded-md">
-          <p>Image here</p>
+          <Image
+            alt="profile"
+            className="w-full h-full object-cover rounded-md"
+            height={330}
+            src={user?.profilePhoto as string}
+            width={330}
+          />
         </div>
         <div className="my-3">
           <h1 className="text-2xl font-semibold">name</h1>
@@ -28,9 +36,9 @@ const Sidebar = () => {
         </Button>
       </div>
       <div className="mt-3 space-y-2 rounded-xl bg-default-100 p-2">
-        {/* <SidebarOptions
-        /> */}
-        <p>sidebar options </p>
+        <SidebarOptions
+          links={user?.role === "USER" ? userLinks : adminLinks}
+        />
       </div>
     </div>
   );

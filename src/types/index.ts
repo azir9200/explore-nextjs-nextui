@@ -34,16 +34,15 @@ export interface ICategory {
 }
 
 export interface IUser {
-  _id: string;
+  _id?: string;
   name: string;
   role: string;
   email: string;
-  status: string;
-  mobileNumber: string;
-  profilePhoto: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
+  phone: string;
+  profilePhoto?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  __v?: number;
 }
 export interface IInput {
   variant?: "flat" | "bordered" | "faded" | "underlined";
