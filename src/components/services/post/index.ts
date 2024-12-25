@@ -4,9 +4,10 @@ import axiosInstance from "@/src/lib/AxiosInstance";
 
 export const createPost = async (formData: FieldValues): Promise<any> => {
   try {
+    console.log(formData);
     const { data } = await axiosInstance.post("/services", formData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "form-data",
       },
     });
 

@@ -1,42 +1,33 @@
 "use client";
 
-import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/button";
 import {
   FieldValues,
   FormProvider,
   SubmitHandler,
-  useFieldArray,
   useForm,
 } from "react-hook-form";
+import axios from "axios";
 
 import FXInput from "@/src/components/form/FXInput";
-import { useRouter } from "next/navigation";
-import { useUser } from "@/src/context/user.provider";
-import { useCreatePost } from "@/src/hooks/post.hook";
+import { toast } from "sonner";
 
 export default function CreatePost() {
-  const router = useRouter();
-
-  const {
-    mutate: handleCreatePost,
-    isPending: createPostPending,
-    isSuccess,
-  } = useCreatePost();
-
-  const { user } = useUser();
-
   const methods = useForm();
-
-  const { control, handleSubmit } = methods;
+  const { handleSubmit } = methods;
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    const postData = {
-      ...data,
-    };
-
-    handleCreatePost(postData);
-    console.log("create form", data);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/services",
+        data
+      );
+      console.log("Response from server:", response.data);
+      toast("Post created successfully!");
+    } catch (error) {
+      console.error("Error posting data:", error);
+      toast("Failed to create the post. Please try again.");
+    }
   };
 
   return (
@@ -60,7 +51,7 @@ export default function CreatePost() {
             <div className="py-3">
               <FXInput label="Image URL" name="image" size="sm" />
             </div>
-            <Button type="submit"> Post</Button>
+            <Button type="submit">Post</Button>
           </form>
         </FormProvider>
       </div>

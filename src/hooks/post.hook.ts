@@ -12,7 +12,9 @@ export const useCreatePost = () => {
       toast.success("Post created successfully");
     },
     onError: (error) => {
+      console.log(error);
       toast.error(error.message);
+      console.log(error.message);
     },
   });
 };

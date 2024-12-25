@@ -1,13 +1,9 @@
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
-import { IPost } from "@/src/types";
 import Container from "@/src/components/UI/Container";
-import { getRecentPosts } from "@/src/components/services/RecentPosts";
-import ServiceCard from "@/src/components/services/service/ServiceCard";
+import CardSkeleton from "@/src/components/UI/CardSkeleton";
 
 export default async function RecentPosts() {
-  const { data: services } = await getRecentPosts();
-
   return (
     <Container>
       <div className="section-title my-8">
@@ -17,9 +13,9 @@ export default async function RecentPosts() {
         </p>
       </div>
       <div className="my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-3">
-        <p> Total services {services.length} </p>
-        {services.map((service: IPost) => (
-          <ServiceCard key={service?._id} service={service} />
+        {[...Array(9)].map(() => (
+          // eslint-disable-next-line react/jsx-key
+          <CardSkeleton />
         ))}
       </div>
       <div className="flex justify-center">
