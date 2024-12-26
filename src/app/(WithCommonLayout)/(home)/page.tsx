@@ -1,11 +1,16 @@
 import Landing from "@/src/components/module/home/LandingPage";
 import LatestService from "@/src/components/services/latestService/LatestService";
+import { getRecentPosts } from "@/src/components/services/RecentPosts";
 
-export default function Home() {
+const HomePage = async () => {
+  const { data: services } = await getRecentPosts();
+
   return (
     <>
       <Landing />
-      <LatestService />
-    </>
+      <LatestService services={services} />
+          </>
   );
-}
+};
+
+export default HomePage;

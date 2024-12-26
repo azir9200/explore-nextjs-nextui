@@ -5,3 +5,12 @@ export const getRecentPosts = async () => {
 
   return res.json();
 };
+
+export const getSingleService = async (_id: string) => {
+  const res = await fetch(`${envConfig.baseApi}/services/${_id}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch post data");
+  }
+  return res.json();
+};

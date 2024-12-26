@@ -6,6 +6,7 @@ import {
   Image,
   CardFooter,
 } from "@nextui-org/react";
+import { Link } from "@nextui-org/link";
 
 const ServiceCard = (service: any) => {
   const { name, description, price, duration, image, _id } = service?.service;
@@ -26,6 +27,10 @@ const ServiceCard = (service: any) => {
         />
       </CardBody>
       <CardFooter>Description: {description} </CardFooter>
+
+      <CardFooter className="font-semibold text-end text-sm underline text-fuchsia-800">
+        <Link href={`/services/${service.id}`}>View Details</Link>
+      </CardFooter>
     </Card>
   );
 };

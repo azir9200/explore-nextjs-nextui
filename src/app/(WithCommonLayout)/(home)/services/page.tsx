@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
-import { IPost } from "@/src/types";
+import { TServices } from "@/src/types";
 import Container from "@/src/components/UI/Container";
 import { getRecentPosts } from "@/src/components/services/RecentPosts";
 import ServiceCard from "@/src/components/services/service/ServiceCard";
@@ -21,15 +21,11 @@ export default async function RecentPosts() {
         </p>
       </div>
       <div className="my-8 justify-center gap-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {services.slice(0, 6).map((service: IPost) => (
+        {services.map((service: TServices) => (
           <ServiceCard key={service?._id} service={service} />
         ))}
       </div>
-      <div className="flex justify-center">
-        <Button className="rounded-md bg-default-900 text-default" size="md">
-          <Link href="/found-items">See All</Link>
-        </Button>
-      </div>
+     
     </Container>
   );
 }
