@@ -22,20 +22,19 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
-      <h3 className="my-2 text-xl font-bold">Register </h3>
-
-      <div className="w-[35%]">
+    <div className="flex w-full min-h-screen flex-col items-center justify-center  bg-cover bg-center px-4">
+      <div className="w-full max-w-md p-6 md:p-8 lg:p-10 rounded-md border backdrop-blur-md bg-black/10 text-center">
+        <h3 className="mb-6 text-4xl font-bold">Sign Up</h3>
         <FXForm
-          //! Only for development
-          defaultValues={{
-            name: "First User",
-            email: "user001@gmail.com",
-            phone: "011223344",
-            address: "New Road, ire",
-            role: "user",
-            password: "123456",
-          }}
+          // //! Only for development
+          // defaultValues={{
+          //   name: "First User",
+          //   email: "user001@gmail.com",
+          //   phone: "011223344",
+          //   address: "New Road, ire",
+          //   role: "user",
+          //   password: "123456",
+          // }}
           onSubmitAction={onSubmit}
         >
           <div className="py-3">
@@ -50,9 +49,9 @@ export default function RegisterPage() {
           <div className="py-3">
             <FXInput label="Address" name="address" size="sm" />
           </div>
-          <div className="py-3">
+          {/* <div className="py-3">
             <FXInput label="Role" name="role" size="sm" />
-          </div>
+          </div> */}
           <div className="py-3">
             <FXInput
               label="Password"

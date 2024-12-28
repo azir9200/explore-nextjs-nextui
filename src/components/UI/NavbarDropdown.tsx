@@ -45,8 +45,8 @@ export default function NavbarDropdown() {
           Admin/service
         </DropdownItem>
         <DropdownItem
-          onPress={() => handleNavigation("/profile/create-post")}
-          key="create-post"
+          onPress={() => handleNavigation("/dashboard/create-post")}
+          key="create-service"
         >
           Create Post
         </DropdownItem>

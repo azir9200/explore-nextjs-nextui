@@ -9,7 +9,7 @@ const HomePage = async () => {
     <>
       <Landing />
       <LatestService services={services} />
-          </>
+    </>
   );
 };
 

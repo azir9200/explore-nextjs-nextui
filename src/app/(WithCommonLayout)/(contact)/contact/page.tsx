@@ -11,15 +11,31 @@ import Container from "@/src/components/UI/Container";
 
 import { toast } from "sonner";
 import { Textarea } from "@nextui-org/input";
+import FXForm from "@/src/components/form/FXForm";
+import FXInput from "@/src/components/form/FXInput";
 
 const ContactPage = () => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    console.log(data);
+    toast.success("Successfully submitted");
+  };
+
   return (
     <div className="py-8 md:py-12">
       <Container>
-        {/* form section */}
+        {/* Form Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">
-          background image
-          {/* contact form */}
+          {/* Background Image */}
+          <div>
+            <Image
+              alt="contactImg"
+              className="rounded-lg w-full h-full object-cover"
+              height={500}
+              src="https://www.sandyfordmotors.com/images/common/carservice-image.webp"
+              width={650}
+            />
+          </div>
+          {/* Contact Form */}
           <div>
             <div className="space-y-2 mb-6">
               <h1 className="text-2xl md:text-3xl font-extrabold">
@@ -32,10 +48,34 @@ const ContactPage = () => {
                 </span>
               </p>
             </div>
+
+            <FXForm
+              // resolver={zodResolver(contactValidationSchema)}
+              onSubmitAction={onSubmit}
+            >
+              <div className="py-3">
+                <FXInput label="Name" name="name" type="text" />
+              </div>
+              <div className="py-3">
+                <FXInput label="Email" name="email" type="email" />
+              </div>
+              <div className="py-3">
+                <FXInput label="Subject" name="subject" type="text" />
+              </div>
+              <div className="py-3">
+                <Textarea label="Message" variant="bordered" />
+              </div>
+              <Button
+                className="mt-3 w-full rounded-md bg-default-900 font-semibold text-default"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </FXForm>
           </div>
         </div>
 
-        {/* contact information section */}
+        {/* Contact Information Section */}
         <div className="pt-14 md:pt-20 grid gap-10">
           <div className="font-medium space-y-3">
             <span className="text-sm font-semibold border rounded-full px-3 py-1">
@@ -46,30 +86,36 @@ const ContactPage = () => {
             </h1>
             <p className="font-medium">
               Or just reach out manually to{" "}
-              <span className="text-primary dark:text-primary-400">
+              <a
+                href="mailto:hello@yummy.com"
+                className="text-primary dark:text-primary-400 underline"
+              >
                 hello@yummy.com
-              </span>
+              </a>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Email Support */}
             <div className="p-4">
-              <span className="inline-flex p-2 mb-3 bg-indigo-50 rounded-full text-primary dark:text-primary-400"></span>
+              <Mail className="inline-block p-2 mb-3 bg-indigo-50 rounded-full text-primary dark:text-primary-400" />
               <h3 className="text-lg font-bold">Email Support</h3>
               <p className="text-sm">Our team can respond in real time.</p>
               <p className="mt-3 text-primary dark:text-primary-400 font-bold">
                 hello@yummy.com
               </p>
             </div>
+            {/* Office Location */}
             <div className="p-4">
-              <span className="inline-flex p-2 mb-3 bg-indigo-50 rounded-full text-primary dark:text-primary-400"></span>
+              <Building2 className="inline-block p-2 mb-3 bg-indigo-50 rounded-full text-primary dark:text-primary-400" />
               <h3 className="text-lg font-bold">Visit Our Office</h3>
               <p className="text-sm">Visit our office in real life.</p>
-              <p className="mt-3 text-primary dark:text-primary-400 font-bold">
+              <address className="mt-3 text-primary dark:text-primary-400 font-bold not-italic">
                 22/c Elementary Avenue, NY
-              </p>
+              </address>
             </div>
+            {/* Phone Support */}
             <div className="p-4">
-              <span className="inline-flex p-2 mb-3 bg-indigo-50 rounded-full text-primary dark:text-primary-400"></span>
+              <Phone className="inline-block p-2 mb-3 bg-indigo-50 rounded-full text-primary dark:text-primary-400" />
               <h3 className="text-lg font-bold">Call Us Directly</h3>
               <p className="text-sm">Available during working hours.</p>
               <p className="mt-3 text-primary dark:text-primary-400 font-bold">

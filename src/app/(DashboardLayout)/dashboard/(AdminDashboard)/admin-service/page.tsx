@@ -6,8 +6,8 @@ const RecipesPage = async () => {
     <div className="mt-5">
       <div className="flex justify-between items-center gap-6 my-6">
         <h3 className="ml-4">All Recipes</h3>
-        <Link href={"/dashboard/services/add-service"}>
-          <Button color="warning">Add Recipe</Button>
+        <Link href={"/dashboard/admin-service/create-service"}>
+          <Button color="warning">Create Service</Button>
         </Link>
       </div>
       <p> RecipesTable </p>

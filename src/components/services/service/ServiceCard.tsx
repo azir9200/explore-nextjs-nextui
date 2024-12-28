@@ -14,16 +14,17 @@ const ServiceCard = (service: any) => {
   return (
     <Card className="py-4">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-xl uppercase font-bold"> {name} </p>
-        <small className="text-default-500">Duration: {duration} </small>
-        <h4 className="font-bold text-large">Price: ${price} </h4>
+        <p className="text-xl uppercase font-bold text-center"> {name} </p>
+        <div className="flex items-center gap-4 justify-around">
+          <small className="text-default-500 ">Duration: {duration} </small>
+          <h4 className="font-bold text-large">Price: ${price} </h4>
+        </div>
       </CardHeader>
       <CardBody className="overflow-visible py-2">
         <Image
           alt="Card background"
-          className="object-cover rounded-xl"
+          className="object-cover rounded-xl w-full"
           src={image}
-          width={270}
         />
       </CardBody>
       <CardFooter>Description: {description} </CardFooter>
