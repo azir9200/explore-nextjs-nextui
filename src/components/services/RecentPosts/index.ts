@@ -6,11 +6,12 @@ export const getRecentPosts = async () => {
   return res.json();
 };
 
-export const getSingleService = async (_id: string) => {
-  const res = await fetch(`${envConfig.baseApi}/services/${_id}`);
+export const getSingleService = async (id: string) => {
+  const res = await fetch(`${envConfig.baseApi}/services/${id}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch post data");
   }
+  // eslint-disable-next-line padding-line-between-statements
   return res.json();
 };

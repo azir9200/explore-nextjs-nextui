@@ -1,11 +1,11 @@
 export default function Mastercard() {
   return (
     <svg
+      className="size-20"
       enableBackground="new 0 0 750 471"
       height="471"
       viewBox="0 0 750 471"
       xmlns="http://www.w3.org/2000/svg"
-      className="size-20"
     >
       <path
         d="m434.008 235.5c0 99.142-80.371 179.504-179.508 179.504s-179.5-80.362-179.5-179.504c0-99.133 80.362-179.504 179.5-179.504 99.137 0 179.508 80.371 179.508 179.504"

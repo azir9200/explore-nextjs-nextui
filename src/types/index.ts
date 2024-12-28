@@ -4,7 +4,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
-export type TServices= {
+export type TServices = {
   _id: string;
   name: string;
   description: string;

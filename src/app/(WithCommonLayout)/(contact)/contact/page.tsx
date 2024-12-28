@@ -2,7 +2,6 @@
 "use client";
 
 import { Button } from "@nextui-org/button";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 
 import { Building2, Mail, Phone } from "lucide-react";
@@ -87,8 +86,8 @@ const ContactPage = () => {
             <p className="font-medium">
               Or just reach out manually to{" "}
               <a
-                href="mailto:hello@yummy.com"
                 className="text-primary dark:text-primary-400 underline"
+                href="mailto:hello@yummy.com"
               >
                 hello@yummy.com
               </a>

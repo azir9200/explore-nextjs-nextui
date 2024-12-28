@@ -1,11 +1,9 @@
 "use client";
 
-import FXForm from "@/src/components/form/FXForm";
-import Loading from "@/src/components/UI/Loading";
-import { useUser } from "@/src/context/user.provider";
-import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 import { useState } from "react";
+
+import { useUser } from "@/src/context/user.provider";
 
 const ProfilePage = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -14,16 +12,16 @@ const ProfilePage = () => {
   return (
     <div className="my-12 ">
       <Image
+        alt="user Img"
+        width={300}
+        // src={session?.user?.image }
+        // width={100}
+        className="mx-auto  rounded-3xl"
+        height={300}
         src={
           (user?.profilePhoto as string) ||
           "https://t4.ftcdn.net/jpg/01/24/65/69/360_F_124656969_x3y8YVzvrqFZyv3YLWNo6PJaC88SYxqM.jpg"
         }
-        width={300}
-        // src={session?.user?.image }
-        // width={100}
-        height={300}
-        alt="user Img"
-        className="mx-auto  rounded-3xl"
       />
       <h1 className="text-4xl text-center mt-10">Name :{user?.name} </h1>
       <h1 className="text-4xl text-center mt-10">Email :{user?.email} </h1>

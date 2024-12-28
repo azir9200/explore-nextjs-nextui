@@ -8,9 +8,10 @@ import {
   useForm,
 } from "react-hook-form";
 import axios from "axios";
-import FXInput from "@/src/components/form/FXInput";
 import React from "react";
 import { toast } from "sonner";
+
+import FXInput from "@/src/components/form/FXInput";
 
 const EditService = () => {
   const methods = useForm();
@@ -20,8 +21,9 @@ const EditService = () => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/services",
-        data
+        data,
       );
+
       console.log("Response from server:", response.data);
       toast("Post created successfully!");
     } catch (error) {
@@ -56,4 +58,5 @@ const EditService = () => {
     </div>
   );
 };
+
 export default EditService;

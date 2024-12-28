@@ -3,7 +3,6 @@
 
 import FXForm from "@/src/components/form/FXForm";
 import FXInput from "@/src/components/form/FXInput";
-import { registerUser } from "@/src/components/services/service/AuthService";
 import Loading from "@/src/components/UI/Loading";
 import { useUser } from "@/src/context/user.provider";
 import { useUserRegistration } from "@/src/hooks/auth.hook";

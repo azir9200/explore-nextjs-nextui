@@ -1,12 +1,13 @@
 "use client";
-import MenuIcon from "@/src/assets/icons/fill/Menu";
-import SearchIcon from "@/src/assets/icons/fill/Search";
-import { useUser } from "@/src/context/user.provider";
-import { useSidebarStore } from "@/src/stores/useSidebar";
+
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable import/order */
+import MenuIcon from "@/src/assets/icons/fill/Menu";
+import SearchIcon from "@/src/assets/icons/fill/Search";
+import { useUser } from "@/src/context/user.provider";
+import { useSidebarStore } from "@/src/stores/useSidebar";
 import { Avatar, Card, Divider, Input, Kbd } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 import MainTooltip from "./MainTooltip";

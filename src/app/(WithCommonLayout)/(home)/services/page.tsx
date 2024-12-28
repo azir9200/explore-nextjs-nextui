@@ -1,5 +1,3 @@
-import { Button } from "@nextui-org/button";
-import Link from "next/link";
 import { TServices } from "@/src/types";
 import Container from "@/src/components/UI/Container";
 import { getRecentPosts } from "@/src/components/services/RecentPosts";
@@ -25,7 +23,6 @@ export default async function RecentPosts() {
           <ServiceCard key={service?._id} service={service} />
         ))}
       </div>
-     
     </Container>
   );
 }

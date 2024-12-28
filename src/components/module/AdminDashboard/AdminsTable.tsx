@@ -42,7 +42,7 @@ export default function AdminsTable() {
   const rowsPerPage = 10;
 
   const { data, isLoading, refetch } = useGetAdmins(
-    `?page=${page}&limit=${rowsPerPage}&isDeleted=false`
+    `?page=${page}&limit=${rowsPerPage}&isDeleted=false`,
   );
   const users = (data?.data?.data as IUser[]) ?? [];
   const count = data?.data?.count;

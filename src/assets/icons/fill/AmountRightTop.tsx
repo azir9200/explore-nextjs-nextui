@@ -1,10 +1,10 @@
 export default function AmountRightTop() {
   return (
     <svg
-      viewBox="0 0 18 19"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       className="size-5"
+      fill="none"
+      viewBox="0 0 18 19"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         className="fill-black dark:fill-white"

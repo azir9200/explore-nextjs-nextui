@@ -26,7 +26,7 @@ export const updateAdmin = async (payload: FieldValues) => {
   try {
     const data = await axiosInstance.patch(
       `/admins/${payload.id}`,
-      payload.data
+      payload.data,
     );
 
     return data;

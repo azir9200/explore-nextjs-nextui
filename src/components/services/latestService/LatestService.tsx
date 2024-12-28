@@ -1,7 +1,9 @@
-import { TServices } from "@/src/types";
-import ServiceCard from "../service/ServiceCard";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
+
+import ServiceCard from "../service/ServiceCard";
+
+import { TServices } from "@/src/types";
 
 const LatestService = ({ services }: { services: TServices[] }) => {
   return (
@@ -19,7 +21,7 @@ const LatestService = ({ services }: { services: TServices[] }) => {
         ))}
       </div>
       <div className="my-8 justify-center gap-10 grid md:grid-cols-3 lg:grid-cols-4">
-        {services.slice(5, 9).map((service: TServices) => (
+        {services.slice(5, 11).map((service: TServices) => (
           <ServiceCard key={service?._id} service={service} />
         ))}
       </div>

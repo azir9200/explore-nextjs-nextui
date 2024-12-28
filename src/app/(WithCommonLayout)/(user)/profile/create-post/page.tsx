@@ -8,9 +8,9 @@ import {
   useForm,
 } from "react-hook-form";
 import axios from "axios";
+import { toast } from "sonner";
 
 import FXInput from "@/src/components/form/FXInput";
-import { toast } from "sonner";
 
 export default function CreatePost() {
   const methods = useForm();
@@ -20,8 +20,9 @@ export default function CreatePost() {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/services",
-        data
+        data,
       );
+
       console.log("Response from server:", response.data);
       toast("Post created successfully!");
     } catch (error) {

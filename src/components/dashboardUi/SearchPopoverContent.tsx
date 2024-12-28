@@ -1,5 +1,6 @@
-import SearchIcon from "@/src/assets/icons/fill/Search";
 import { Input } from "@nextui-org/react";
+
+import SearchIcon from "@/src/assets/icons/fill/Search";
 
 export default function SearchPopoverContent() {
   return (

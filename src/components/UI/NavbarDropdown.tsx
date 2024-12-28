@@ -6,10 +6,11 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/dropdown";
-
 import { usePathname, useRouter } from "next/navigation";
 import { Avatar } from "@nextui-org/avatar";
+
 import { logout } from "../services/service/AuthService";
+
 import { useUser } from "@/src/context/user.provider";
 
 export default function NavbarDropdown() {
@@ -33,20 +34,20 @@ export default function NavbarDropdown() {
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem
-          onPress={() => handleNavigation("dashboard/admins")}
           key="profile"
+          onPress={() => handleNavigation("dashboard/admins")}
         >
           Admin
         </DropdownItem>
         <DropdownItem
-          onPress={() => handleNavigation("dashboard/admin-service")}
           key="settings"
+          onPress={() => handleNavigation("dashboard/admin-service")}
         >
           Admin/service
         </DropdownItem>
         <DropdownItem
-          onPress={() => handleNavigation("/dashboard/create-post")}
           key="create-service"
+          onPress={() => handleNavigation("/dashboard/create-post")}
         >
           Create Post
         </DropdownItem>

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 "use client";
 
 import {
@@ -23,7 +24,6 @@ import { useRouter } from "next/navigation";
 export const Navbar = () => {
   const { user, isLoading } = useUser();
   const router = useRouter();
-  console.log("current user navbar", user);
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
@@ -40,7 +40,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
                 color="foreground"
                 href={item.href}

@@ -1,5 +1,6 @@
+import Image from "next/image";
+
 import { getSingleService } from "@/src/components/services/RecentPosts";
-import ServiceDetails from "@/src/components/services/serviceDetails/ServiceDetails";
 
 type TProps = {
   params: {
@@ -13,8 +14,24 @@ const ServiceDetail = async ({ params }: TProps) => {
   console.log("service details", service);
 
   return (
-    <div className="p-5">
-      <ServiceDetails service={service} />
+    <div className="card card-side bg-base-100 shadow-xl">
+      <figure>
+        <Image
+          alt="book image"
+          height={300}
+          src={service.data.image}
+          width={300}
+        />
+      </figure>
+      <div className="p-12">
+        <div className="flex justify-between mb-4">
+          <h2 className="card-title">{service.data.name}</h2>
+          <div className="badge p-4 bg-fuchsia-500">
+            {service.data.category}
+          </div>
+        </div>
+        <p>{service.data.description}</p>
+      </div>
     </div>
   );
 };

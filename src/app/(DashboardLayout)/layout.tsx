@@ -10,6 +10,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
 
       <div className="w-[100%]">
         <Topbar />
+
         {children}
       </div>
     </div>

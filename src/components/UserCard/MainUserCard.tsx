@@ -1,4 +1,4 @@
-import { Avatar, Chip } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/react";
 
 import { IUser } from "@/src/types";
 

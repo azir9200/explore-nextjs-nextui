@@ -30,7 +30,7 @@ const ServiceCard = (service: any) => {
       <CardFooter>Description: {description} </CardFooter>
 
       <CardFooter className="font-semibold text-end text-sm underline text-fuchsia-800">
-        <Link href={`/services/${service.id}`}>View Details</Link>
+        <Link href={`/services/${_id}`}>View Details</Link>
       </CardFooter>
     </Card>
   );

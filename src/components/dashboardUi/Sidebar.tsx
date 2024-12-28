@@ -105,7 +105,7 @@ export default function Sidebar() {
               </span>
             </div>
             <ul className="w-full flex flex-col gap-2 mt-16">
-              {(user?.role === "USER"
+              {(user?.role === "user"
                 ? UserSideBarItem()
                 : AdminSideBarItem()
               ).map((item, index) => (
