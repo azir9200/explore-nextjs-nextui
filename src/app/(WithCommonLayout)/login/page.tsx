@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 "use client";
 
 import FXForm from "@/src/components/form/FXForm";
@@ -12,20 +13,35 @@ import { loginUser } from "@/src/components/services/service/AuthService";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useUser } from "@/src/context/user.provider";
 import { useUserLogin } from "@/src/hooks/auth.hook";
-import { useEffect, Suspense } from "react";
+import { useEffect, Suspense, useState } from "react";
 import Loading from "@/src/components/UI/Loading";
+import { toast } from "sonner";
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { setIsLoading: userLoading } = useUser();
+  const [isPending, setIsPending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const { setIsLoading: setUserLoading } = useUser();
 
   const redirect = searchParams.get("redirect");
 
-  const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    handleUserLogin(data);
-    userLoading(true);
+  // const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    setIsPending(true);
+    const res = await loginUser(data);
+    console.log("login successful", res);
+    // handleUserLogin(data);
+    if (res?.success) {
+      toast.success(res?.message);
+      setIsPending(false);
+      setIsSuccess(true);
+    }
+    if (!res?.success) {
+      toast.error(res?.message);
+      setIsPending(false);
+    }
+    setUserLoading(true);
   };
 
   useEffect(() => {

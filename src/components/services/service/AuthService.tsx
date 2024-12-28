@@ -1,10 +1,11 @@
 "use server";
 
+import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
 import { jwtDecode } from "jwt-decode";
 import axiosInstance from "../../../lib/AxiosInstance";
 import Cookies from "js-cookie";
-import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 export const registerUser = async (userData: FieldValues) => {
   try {
@@ -19,7 +20,7 @@ export const registerUser = async (userData: FieldValues) => {
 
     return data;
   } catch (error: any) {
-    throw new Error(error);
+    throw new Error(error?.response?.data?.message);
   }
 };
 
@@ -27,6 +28,7 @@ export const registerUser = async (userData: FieldValues) => {
 export const loginUser = async (userData: FieldValues) => {
   try {
     const { data } = await axiosInstance.post("/auth/login", userData);
+
     console.log("login  new user", data);
     if (data.success) {
       (await cookies()).set("accessToken", data?.data?.accessToken);
@@ -42,10 +44,11 @@ export const loginUser = async (userData: FieldValues) => {
 export const logout = async () => {
   (await cookies()).delete("accessToken");
   (await cookies()).delete("refreshToken");
+  redirect("/login");
 };
 
 export const getCurrentUser = async () => {
-  const accessToken = Cookies.get("accessToken");
+  const accessToken = (await cookies()).get("accessToken")?.value;
 
   console.log("accessToken", accessToken);
 
@@ -55,7 +58,6 @@ export const getCurrentUser = async () => {
     decodedToken = await jwtDecode(accessToken);
 
     return {
-     
       name: decodedToken.name,
       email: decodedToken.email,
       phone: decodedToken.phone,
