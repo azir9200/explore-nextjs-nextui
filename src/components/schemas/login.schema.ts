@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "../../../node_modules/zod";
 
 const loginValidationSchema = z.object({
   email: z.string().trim().email("Please enter a valid email"),

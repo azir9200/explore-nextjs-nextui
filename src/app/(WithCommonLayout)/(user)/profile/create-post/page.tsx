@@ -7,7 +7,7 @@ import {
   SubmitHandler,
   useForm,
 } from "react-hook-form";
-import axios from "axios";
+import axios from "../../../../../../node1_modules/axios";
 import { toast } from "sonner";
 
 import FXInput from "@/src/components/form/FXInput";

@@ -1,32 +1,28 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-
 import { useUser } from "@/src/context/user.provider";
 
 const ProfilePage = () => {
-  const [file, setFile] = useState<File | null>(null);
-  const { user, setIsLoading: setUserLoading } = useUser();
+  const { user, isLoading } = useUser();
 
   return (
-    <div className="my-12 ">
-      <Image
-        alt="user Img"
-        width={300}
-        // src={session?.user?.image }
-        // width={100}
-        className="mx-auto  rounded-3xl"
-        height={300}
+    <div className="h-[calc(100vh-64px)] bg-cover bg-center bg-slate-700 p-8">
+      <div className="container mx-auto pt-12   text-stone-100 font-semibold text-3xl space-y-4 text-center  justify-center items-center ">
+        {/* <img
         src={
-          (user?.profilePhoto as string) ||
+          user?.image ||
           "https://t4.ftcdn.net/jpg/01/24/65/69/360_F_124656969_x3y8YVzvrqFZyv3YLWNo6PJaC88SYxqM.jpg"
         }
-      />
-      <h1 className="text-4xl text-center mt-10">Name :{user?.name} </h1>
-      <h1 className="text-4xl text-center mt-10">Email :{user?.email} </h1>
-      {/* <h1 className="text-4xl text-center mt-10">Welcome {user?.address} </h1>
-      <h1 className="text-4xl text-center mt-10">Welcome {user?.mobile} </h1> */}
+        alt=""
+        className="rounded-full sm: w-40 md:48 "
+      /> */}
+
+        <h2>Welcome {user?.name} </h2>
+        <p>Your email is:{user?.email} </p>
+        {/* <p>Your Address: {user?.address} </p> */}
+        <p> {user?.phone} </p>
+        <h3>Thank so much for using our site.</h3>
+      </div>
     </div>
   );
 };

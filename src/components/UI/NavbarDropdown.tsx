@@ -34,23 +34,18 @@ export default function NavbarDropdown() {
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem
-          key="profile"
+          key="admins"
           onPress={() => handleNavigation("dashboard/admins")}
         >
           Admin
         </DropdownItem>
         <DropdownItem
-          key="settings"
-          onPress={() => handleNavigation("dashboard/admin-service")}
+          key="user"
+          onPress={() => handleNavigation("dashboard/user")}
         >
-          Admin/service
+          User
         </DropdownItem>
-        <DropdownItem
-          key="create-service"
-          onPress={() => handleNavigation("/dashboard/create-post")}
-        >
-          Create Post
-        </DropdownItem>
+
         <DropdownItem
           key="delete"
           className="text-danger"

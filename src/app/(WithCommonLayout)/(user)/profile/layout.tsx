@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from "../../../../../node1_modules/@types/react";
 
 import Container from "@/src/components/UI/Container";
 

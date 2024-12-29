@@ -27,7 +27,7 @@ const AboutPage = () => {
               alt="recipe image"
               className="w-full h-full object-cover rounded-xl"
               height={200}
-              src="https://www.allrecipes.com/thmb/MBM49JvXs7YaGye2-BaFOrx1k3E=/771x514/filters:no_upscale():max_bytes(150000):strip_icc():focal(2283x1488:2285x1490):format(webp)/AR-Pizza-Lava-Toast-4x3-0de18c7a898346dfab1ede9f00471aed.jpg"
+              src="https://thumbs.dreamstime.com/z/handsome-muscular-mechanic-tool-sexy-work-75369582.jpg"
               width={270}
             />
           </div>
@@ -36,7 +36,7 @@ const AboutPage = () => {
               alt="recipe image"
               className="w-full h-full object-cover rounded-xl"
               height={200}
-              src="https://www.allrecipes.com/thmb/4hg3vuRbTBRbAeEmptAx2L__Ey0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/14522-Pizza-On-The-Grill100-4x3-a8027c29a77c41468ad65b0f439b0d50.jpg"
+              src="https://www.roblangimages.com/img-get/I0000KmAqQPatE7E/s/1200/I0000KmAqQPatE7E.jpg"
               width={270}
             />
           </div>
@@ -45,7 +45,7 @@ const AboutPage = () => {
               alt="recipe image"
               className="w-full h-full object-cover rounded-xl"
               height={200}
-              src="https://www.allrecipes.com/thmb/MX_t_NcMlM4dekf7N8xgLZO_bTk=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/AR-76296-Meat-Pie-DDMFS-4x3-beauty-f987781548f14bfcb0cb282f598e4e60.jpg"
+              src="https://www.shutterstock.com/image-photo/car-service-mechanic-explains-girl-260nw-2534236281.jpg"
               width={270}
             />
           </div>
@@ -96,7 +96,7 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727308800&semt=ais_hybrid"
+                src="https://www.airdesignspokane.com/wp-content/uploads/2016/04/serviceman.png"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">
@@ -109,7 +109,7 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://static.vecteezy.com/system/resources/previews/024/344/084/non_2x/businessman-isolated-illustration-ai-generative-free-png.png"
+                src="https://wheelforcecentre.com/wp-content/uploads/2021/04/Mechanic-wheel-force-centre-transparent.png"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">
@@ -122,7 +122,7 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://www.pngall.com/wp-content/uploads/15/Man-In-Suit-PNG-Pic.png"
+                src="https://w7.pngwing.com/pngs/206/50/png-transparent-car-auto-mechanic-automobile-repair-shop-chevrolet-car-tshirt-car-automobile-repair-shop-thumbnail.png"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">
@@ -135,7 +135,7 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://i.pinimg.com/736x/dd/ca/f4/ddcaf4fb59a7be7af7c6cf34abf18c1c.jpg"
+                src="https://e7.pngegg.com/pngimages/689/7/png-clipart-car-automobile-repair-shop-auto-mechanic-motor-vehicle-service-car-car-automobile-repair-shop.png"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">

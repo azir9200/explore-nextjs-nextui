@@ -57,14 +57,14 @@ export default function RegisterPage() {
           <h3 className="mb-6 text-4xl font-bold">Sign Up</h3>
           <FXForm
             //! Only for development
-            defaultValues={{
-              name: "First User",
-              email: "user001@gmail.com",
-              phone: "011223344",
-              address: "New Road, ire",
-              role: "user",
-              password: "123456",
-            }}
+            // defaultValues={{
+            //   name: "First User",
+            //   email: "user001@gmail.com",
+            //   phone: "011223344",
+            //   address: "New Road, ire",
+            //   role: "user",
+            //   password: "123456",
+            // }}
             onSubmitAction={onSubmit}
           >
             <div className="py-3">

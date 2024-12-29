@@ -21,10 +21,9 @@ const CreateService = () => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/services",
-        data,
+        data
       );
 
-      console.log("Response from server:", response.data);
       toast("Post created successfully!");
     } catch (error) {
       console.error("Error posting data:", error);

@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable import/order */
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { FieldValues } from "react-hook-form";
@@ -9,13 +8,6 @@ import {
   removeAdmin,
   updateAdmin,
 } from "../components/services/AdminServices";
-// import {
-//   addAdmin,
-//   getAdmins,
-//   removeAdmin,
-//   updateAdmin,
-// } from "../services/AdminServices";
-
 /* eslint-disable prettier/prettier */
 export const useGetAdmins = (query: string) => {
   return useQuery<any, Error>({

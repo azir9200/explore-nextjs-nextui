@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode } from "../../../node1_modules/@types/react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 
 interface formConfig {

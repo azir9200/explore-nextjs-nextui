@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "../../node1_modules/@types/react";
 
 import { IconSvgProps } from "@/src/types";
 

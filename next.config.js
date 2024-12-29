@@ -1,7 +1,14 @@
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
+//   reactProductionBrowserSourceMaps: true,
+//   reactStrictMode: false,
 //   images: {
-//     domains: ["www.allrecipes.com"],
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "**",
+//       },
+//     ],
 //   },
 // };
 
@@ -9,11 +16,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactProductionBrowserSourceMaps: true,
   reactStrictMode: false,
-  env: {
-    SHOW_ERRORS: true, // Custom environment variable
-  },
   images: {
     remotePatterns: [
       {

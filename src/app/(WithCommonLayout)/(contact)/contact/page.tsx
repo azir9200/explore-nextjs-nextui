@@ -43,7 +43,7 @@ const ContactPage = () => {
               <p className="font-medium">
                 Or just reach out manually to{" "}
                 <span className="text-primary dark:text-primary-400">
-                  hello@yummy.com
+                  mycar@service.com
                 </span>
               </p>
             </div>
@@ -87,9 +87,9 @@ const ContactPage = () => {
               Or just reach out manually to{" "}
               <a
                 className="text-primary dark:text-primary-400 underline"
-                href="mailto:hello@yummy.com"
+                href="mailto:mycar@service.com"
               >
-                hello@yummy.com
+                mycar@service.com
               </a>
             </p>
           </div>
@@ -100,7 +100,7 @@ const ContactPage = () => {
               <h3 className="text-lg font-bold">Email Support</h3>
               <p className="text-sm">Our team can respond in real time.</p>
               <p className="mt-3 text-primary dark:text-primary-400 font-bold">
-                hello@yummy.com
+                mycar@service.com
               </p>
             </div>
             {/* Office Location */}

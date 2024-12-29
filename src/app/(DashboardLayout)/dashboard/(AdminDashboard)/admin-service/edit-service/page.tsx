@@ -21,7 +21,7 @@ const EditService = () => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/services",
-        data,
+        data
       );
 
       console.log("Response from server:", response.data);

@@ -94,7 +94,7 @@ export default function Sidebar() {
                 <h1
                   className={`ltr:font-poppinsRegular ${isSidebarExpanded ? "md:block" : "md:hidden"} text-white`}
                 >
-                  Yummy
+                  MyCar
                 </h1>
               </Link>
               <span

@@ -20,7 +20,7 @@ const LatestService = ({ services }: { services: TServices[] }) => {
           <ServiceCard key={service._id} service={service} />
         ))}
       </div>
-      <div className="my-8 justify-center gap-10 grid md:grid-cols-3 lg:grid-cols-4">
+      <div className="my-8 justify-center gap-10 grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
         {services.slice(5, 11).map((service: TServices) => (
           <ServiceCard key={service?._id} service={service} />
         ))}
