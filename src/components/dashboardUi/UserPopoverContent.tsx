@@ -41,7 +41,7 @@ export default function UserPopoverContent({ user }: { user: IUser | null }) {
       <Divider className="my-2" />
       <ul className="w-full child:transition-all child:duration-200 child-hover:bg-primaryGray dark:child-hover:bg-black child:p-2 child:rounded-lg child:cursor-pointer space-y-2">
         <li>
-          <Link href="/dashboard/profile">{t("Profile")}</Link>
+          <Link href="/dashboard">{t("Dashboard")}</Link>
         </li>
 
         <li className="sm:hidden" onClick={changeThemeHandler}>

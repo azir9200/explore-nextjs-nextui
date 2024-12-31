@@ -7,7 +7,6 @@ import {
   SubmitHandler,
   useForm,
 } from "react-hook-form";
-import axios from "axios";
 import React from "react";
 import { toast } from "sonner";
 
@@ -17,17 +16,10 @@ const EditService = () => {
   const methods = useForm();
   const { handleSubmit } = methods;
 
-  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/services",
-        data
-      );
-
-      console.log("Response from server:", response.data);
       toast("Post created successfully!");
     } catch (error) {
-      console.error("Error posting data:", error);
       toast("Failed to create the post. Please try again.");
     }
   };

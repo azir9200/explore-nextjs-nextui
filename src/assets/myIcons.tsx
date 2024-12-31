@@ -1,4 +1,4 @@
-import { BeakerIcon } from "@heroicons/react/24/solid";
+import { BeakerIcon } from "lucide-react";
 
 export const TrashIcon = () => {
   return (

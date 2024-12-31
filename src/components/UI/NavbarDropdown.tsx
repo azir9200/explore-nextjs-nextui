@@ -6,7 +6,7 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/dropdown";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Avatar } from "@nextui-org/avatar";
 
 import { logout } from "../services/service/AuthService";
@@ -15,7 +15,7 @@ import { useUser } from "@/src/context/user.provider";
 
 export default function NavbarDropdown() {
   const router = useRouter();
-  const pathname = usePathname();
+
   const { user, setIsLoading: userLoading } = useUser();
 
   const handleLogout = () => {

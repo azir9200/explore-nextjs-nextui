@@ -4,7 +4,7 @@ export default function layout({
   children,
 }: {
   children: ReactNode;
-  recentPosts: ReactNode;
+  // recentPosts: ReactNode;
 }) {
   return <>{children}</>;
 }

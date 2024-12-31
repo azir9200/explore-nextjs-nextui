@@ -30,7 +30,6 @@ const LoginPage = () => {
     setIsPending(true);
     const res = await loginUser(data);
 
-    console.log("login successful", res);
     // handleUserLogin(data);
     if (res?.success) {
       toast.success(res?.message);

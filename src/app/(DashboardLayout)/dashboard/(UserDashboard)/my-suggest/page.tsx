@@ -12,7 +12,7 @@ import {
 import { useUser } from "@/src/context/user.provider";
 
 const MySuggestPage = () => {
-  const { user, isLoading } = useUser();
+  const { user } = useUser();
 
   const [isFollowed, setIsFollowed] = React.useState(false);
 

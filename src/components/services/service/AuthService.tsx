@@ -11,8 +11,6 @@ export const registerUser = async (userData: FieldValues) => {
   try {
     const { data } = await axiosInstance.post("/auth/register", userData);
 
-    console.log("register  new user", data);
-
     if (data.success) {
       (await cookies()).set("accessToken", data?.data?.accessToken);
       (await cookies()).set("refreshToken", data?.data?.refreshToken);
@@ -29,7 +27,6 @@ export const loginUser = async (userData: FieldValues) => {
   try {
     const { data } = await axiosInstance.post("/auth/login", userData);
 
-    console.log("login  new user", data);
     if (data.success) {
       (await cookies()).set("accessToken", data?.data?.accessToken);
       (await cookies()).set("refreshToken", data?.data?.refreshToken);
@@ -49,8 +46,6 @@ export const logout = async () => {
 
 export const getCurrentUser = async () => {
   const accessToken = (await cookies()).get("accessToken")?.value;
-
-  console.log("accessToken", accessToken);
 
   let decodedToken = null;
 

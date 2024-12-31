@@ -15,7 +15,6 @@ import FXInput from "@/src/components/form/FXInput";
 
 const ContactPage = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    console.log(data);
     toast.success("Successfully submitted");
   };
 

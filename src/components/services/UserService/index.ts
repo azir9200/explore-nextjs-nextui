@@ -2,7 +2,7 @@
 import { FieldValues } from "react-hook-form";
 
 import axiosInstance from "@/src/lib/AxiosInstance";
-import Cookies from "../../../../node1_modules/@types/js-cookie";
+import Cookies from "js-cookie";
 
 export const getUsers = async (query: string) => {
   try {

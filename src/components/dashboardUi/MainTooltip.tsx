@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-sort-props */
 import { Tooltip } from "@nextui-org/react";
-import { ReactNode } from "../../../node1_modules/@types/react";
+import { ReactNode } from "react";
 
 export default function MainTooltip({
   children,

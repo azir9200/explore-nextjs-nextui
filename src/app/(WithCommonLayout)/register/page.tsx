@@ -27,8 +27,6 @@ export default function RegisterPage() {
       ...data,
     };
 
-    console.log("Inside form user data: ", isPending, userData);
-
     handleUserRegistration(userData);
     setUserLoading(true);
   };

@@ -18,12 +18,10 @@ import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/UI/theme-switch";
 import NavbarDropdown from "./NavbarDropdown";
 import { useUser } from "@/src/context/user.provider";
-import { useRouter } from "next/navigation";
 import { Car } from "lucide-react";
 
 export const Navbar = () => {
-  const { user, isLoading } = useUser();
-  const router = useRouter();
+  const { user } = useUser();
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
@@ -45,7 +43,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
                 color="foreground"
                 href={item.href}

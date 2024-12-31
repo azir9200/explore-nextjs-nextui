@@ -19,14 +19,13 @@ const CreateService = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/services",
-        data
-      );
+      await axios.post("http://localhost:5000/api/services", data);
 
       toast("Post created successfully!");
     } catch (error) {
-      console.error("Error posting data:", error);
+      
+      console.log(error);
+
       toast("Failed to create the post. Please try again.");
     }
   };

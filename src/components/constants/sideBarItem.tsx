@@ -1,12 +1,5 @@
 /* eslint-disable import/order */
-import {
-  Edit2Icon,
-  Home,
-  NewspaperIcon,
-  ServerIcon,
-  User,
-  Users,
-} from "lucide-react";
+import { Home, NewspaperIcon, ServerIcon, User } from "lucide-react";
 
 export function UserSideBarItem() {
   return [
