@@ -19,20 +19,17 @@ const CreateService = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
-      await axios.post("http://localhost:5000/api/services", data);
+      await axios.post("/api/services", data);
 
       toast("Post created successfully!");
     } catch (error) {
-      
-      console.log(error);
-
       toast("Failed to create the post. Please try again.");
     }
   };
 
   return (
     <div className="h-full rounded-xl bg-gradient-to-b from-default-100 px-[73px] py-12">
-      <h1 className="text-2xl font-semibold">Create Service</h1>
+      <h1 className="text-2xl text-center font-semibold">Create Service</h1>
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="py-3">
@@ -50,7 +47,14 @@ const CreateService = () => {
           <div className="py-3">
             <FXInput label="Image URL" name="image" size="sm" />
           </div>
-          <Button type="submit">Create New Service</Button>
+          <div>
+            <Button
+              className="my-3 w-full rounded-md bg-default-100 text-2xl"
+              type="submit"
+            >
+              Create New Service
+            </Button>
+          </div>
         </form>
       </FormProvider>
     </div>

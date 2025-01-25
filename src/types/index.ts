@@ -14,7 +14,6 @@ export type TServices = {
   image: string; // URL to the image
   createdAt: string; // ISO 8601 date string
   updatedAt: string; // ISO 8601 date string
-  __v: number; // Version key for Mongoose documents
 };
 
 export interface ICategory {

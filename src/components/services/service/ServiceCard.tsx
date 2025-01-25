@@ -3,32 +3,36 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Image,
   CardFooter,
+  Divider,
+  Link,
+  Image,
 } from "@nextui-org/react";
-import { Link } from "@nextui-org/link";
 
 const ServiceCard = (service: any) => {
-  const { name, description, price, duration, image, _id } = service?.service;
+  const { name, description, price, image, _id } = service?.service;
 
   return (
-    <Card className="py-4">
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-xl uppercase font-bold text-center"> {name} </p>
-        <div className="flex items-center gap-4 justify-around">
-          <small className="text-default-500 ">Duration: {duration} </small>
-          <h4 className="font-bold text-large">Price: ${price} </h4>
-        </div>
-      </CardHeader>
-      <CardBody className="overflow-visible py-2">
+    <Card className="max-w-[400px]">
+      <CardHeader className="flex gap-3">
         <Image
           alt="Card background"
-          className="object-cover rounded-xl w-full"
+          className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-75"
           src={image}
         />
-      </CardBody>
-      <CardFooter>Description: {description} </CardFooter>
+      </CardHeader>
+      <Divider />
+      <CardBody>
+        <div className=" flex flex-col flex-grow">
+          <h3 className="text-xl font-semibold text-blue-500 mb-2">
+            Service Name: {name}
+          </h3>
+          <p className="text-lg font-bold text-green-600 "> Price: ${price}</p>
 
+          <p className="text-gray-700  flex-grow">Description: {description}</p>
+        </div>
+      </CardBody>
+      <Divider />
       <CardFooter className="font-semibold text-end text-sm underline text-fuchsia-800">
         <Link href={`/services/${_id}`}>View Details</Link>
       </CardFooter>
