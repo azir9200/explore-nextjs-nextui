@@ -24,6 +24,12 @@
       "@/src/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/types/app/(WithCommonLayout)/(home)/layout.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/types/app/(WithCommonLayout)/(home)/layout.tsx"
+  ],
   "exclude": ["node1_modules"]
 }

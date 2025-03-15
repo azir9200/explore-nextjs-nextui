@@ -145,10 +145,6 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        {/* history and achievement section */}
-        {/* <HistorySection /> */}
-        {/* contact section */}
-        {/* <ContactSection /> */}
       </Container>
     </div>
   );

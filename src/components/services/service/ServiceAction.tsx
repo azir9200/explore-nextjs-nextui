@@ -17,7 +17,7 @@ export const getAllServices = async (type?: string) => {
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_API}/product`,
-    fetchOptions
+    fetchOptions,
   );
 
   if (!res.ok) {

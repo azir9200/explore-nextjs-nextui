@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 "use client";
 
 import FXForm from "@/src/components/form/FXForm";

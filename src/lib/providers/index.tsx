@@ -10,9 +10,9 @@ import { Toaster } from "sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 
-import store from "../../redux/store";
 
 import UserProvider from "@/src/context/user.provider";
+import { store } from "@/src/redux/store";
 
 export interface ProvidersProps {
   children: React.ReactNode;
