@@ -10,7 +10,6 @@ import { Toaster } from "sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 
-
 import UserProvider from "@/src/context/user.provider";
 import { store } from "@/src/redux/store";
 
@@ -25,13 +24,14 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Provider store={store}> </Provider>
-      <UserProvider>
-        <NextUIProvider navigate={router.push}>
-          <Toaster />
-          <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-        </NextUIProvider>
-      </UserProvider>
+      <Provider store={store}>
+        <UserProvider>
+          <NextUIProvider navigate={router.push}>
+            <Toaster />
+            <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+          </NextUIProvider>
+        </UserProvider>
+      </Provider>
     </QueryClientProvider>
   );
 }

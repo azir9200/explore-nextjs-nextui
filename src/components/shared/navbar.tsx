@@ -18,7 +18,7 @@ import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/UI/theme-switch";
 import NavbarDropdown from "../UI/NavbarDropdown";
 import { useUser } from "@/src/context/user.provider";
-import { Car } from "lucide-react";
+import { Book, Car } from "lucide-react";
 
 export const Navbar = () => {
   const { user } = useUser();
@@ -31,9 +31,9 @@ export const Navbar = () => {
             className="flex justify-start items-center gap-1 bg-white text-black rounded-md"
             href="/"
           >
-            <Car className="font-bold" />
-            <p className="text-xl rounded-md pr-2 bg-emerald-400 font-bold text-inherit">
-              MyCar
+            <Book className="font-bold text-yellow-800" />
+            <p className="text-xl rounded-md pr-2 bg-yellow-600 font-bold text-inherit">
+              Golden Book
             </p>
           </NextLink>
         </NavbarBrand>
