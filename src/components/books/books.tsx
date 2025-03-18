@@ -6,29 +6,37 @@ interface BookProps {
 
 const Books: React.FC<BookProps> = ({ book }) => {
   return (
-    <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-5">
+    <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-5 transition-transform transform hover:scale-105 hover:shadow-xl">
+      {/* Book Image */}
       <img
         className="w-full h-64 object-cover rounded-lg"
         src={book?.image}
         alt={book.title}
       />
+
+      {/* Book Info */}
       <div className="py-4">
-        <h3 className="text-xl font-semibold text-gray-800">{book.title}</h3>
+        <h3 className="text-xl font-semibold text-gray-800">📖 {book.title}</h3>
         <p className="text-gray-600">
-          Genre: <span className="font-medium">{book.genre}</span>
+          <span className="font-semibold">Genre:</span> {book.genre}
         </p>
         <p className="text-gray-600">
-          Published Year:{" "}
-          <span className="font-medium">{book.publishedYear}</span>
+          <span className="font-semibold">Published:</span> {book.publishedYear}
         </p>
         <p className="text-gray-600">
-          Available Copies:{" "}
-          <span className="font-medium">{book.availableCopies}</span>
+          <span className="font-semibold">Available Copies:</span>{" "}
+          {book.availableCopies}
         </p>
         <p className="text-gray-600">
-          Total Copies: <span className="font-medium">{book.totalCopies}</span>
+          <span className="font-semibold">Total Copies:</span>{" "}
+          {book.totalCopies}
         </p>
       </div>
+
+      {/* Borrow Button */}
+      <button className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+        Borrow This Book
+      </button>
     </div>
   );
 };

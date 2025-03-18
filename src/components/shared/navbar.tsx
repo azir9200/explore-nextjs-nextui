@@ -28,11 +28,11 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
-            className="flex justify-start items-center gap-1 bg-white text-black rounded-md"
+            className="flex justify-start items-center gap-1 bg-green-900 rounded-md"
             href="/"
           >
             <Book className="font-bold text-yellow-800" />
-            <p className="text-xl rounded-md pr-2 bg-yellow-600 font-bold text-inherit">
+            <p className="text-xl text-white rounded-md pr-2 font-bold text-inherit">
               Golden Book
             </p>
           </NextLink>

@@ -12,7 +12,8 @@ const AboutPage = () => {
             About Us
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-slate-50 pt-2 max-w-screen-lg">
-            Yummy is bringing recipe sharing back to life with ease.
+            Golden Book is bringing to you get access easily to your favourite
+            book.
           </h1>
           <p className="font-medium md:text-lg">
             Stop struggling with outdated platforms. Its time to start savoring
@@ -24,28 +25,28 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           <div className="md:col-span-3">
             <Image
-              alt="recipe image"
+              alt="recipe image1"
               className="w-full h-full object-cover rounded-xl"
               height={200}
-              src="https://thumbs.dreamstime.com/z/handsome-muscular-mechanic-tool-sexy-work-75369582.jpg"
+              src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym9va3xlbnwwfHwwfHx8MA%3D%3D"
               width={270}
             />
           </div>
           <div className="md:col-span-6">
             <Image
-              alt="recipe image"
+              alt="recipe image2"
               className="w-full h-full object-cover rounded-xl"
               height={200}
-              src="https://www.roblangimages.com/img-get/I0000KmAqQPatE7E/s/1200/I0000KmAqQPatE7E.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcL3a_klbUkpzghDp_a2QA71-eWoF5Y-E4vKURqMA_HX0ijNUuErkrlemH3wGbrttUpM&usqp=CAU"
               width={270}
             />
           </div>
           <div className="md:col-span-3">
             <Image
-              alt="recipe image"
+              alt="recipe image3"
               className="w-full h-full object-cover rounded-xl"
               height={200}
-              src="https://www.shutterstock.com/image-photo/car-service-mechanic-explains-girl-260nw-2534236281.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfP3I60Nn0B4tWBakOgz4_3JziO04B--m8T-xDiVWBfPwyoSmGla_NaUoqcgZZ51eT8AQ&usqp=CAU"
               width={270}
             />
           </div>
@@ -57,17 +58,18 @@ const AboutPage = () => {
               Your Vision
             </h1>
             <p className="text-slate-600 dark:text-slate-300 font-medium">
-              We envision a vibrant community where food lovers, home cooks, and
-              culinary enthusiasts come together to share, explore, and
-              celebrate the art of cooking. Our platform inspires creativity and
-              connection through the universal language of food.
+              Bookshops are open, inclusive, welcoming spaces for everyone. Amid
+              growing polarisation and censorship, this campaign will give voice
+              to booksellers from across the RISE network who go above and
+              beyond to ensure that their bookshops remain welcoming and
+              inclusive spaces for all.
             </p>
             <p className="text-slate-600 dark:text-slate-300 font-medium">
-              By revolutionizing the way recipes are shared and discovered, we
-              empower individuals to explore new cuisines, perfect their skills,
-              and express their culinary passion. Join us in building a
-              community where every recipe tells a story and every cook finds
-              their voice.
+              Our mission is to inspire a love for reading by offering a diverse
+              collection of books that ignite imagination, expand knowledge, and
+              connect readers to new worlds. We strive to create a welcoming and
+              accessible space where book lovers of all ages can discover,
+              learn, and grow through the power of literature
             </p>
           </div>
           <div className="bg-primary dark:bg-primary-50 text-white p-6 rounded-md">
@@ -75,10 +77,12 @@ const AboutPage = () => {
               Our Mission
             </h1>
             <p className="font-medium">
-              We aim to create a seamless platform for discovering, sharing, and
-              preserving recipes. By fostering a collaborative environment, we
-              empower cooks of all levels to connect, learn, and grow. Together,
-              we celebrate the joy of cooking and the love of sharing meals.
+              Bookshops have a unique role in fostering values of peace,
+              democracy, and tolerance. Following the European elections, now,
+              more than ever, it is vital to remind policymakers and
+              stakeholders how crucial support from democratic institutions and
+              book friendly policies are, not just for bookshops, but also for
+              the vitality and vibrancy of society.
             </p>
           </div>
         </div>
@@ -109,12 +113,12 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://wheelforcecentre.com/wp-content/uploads/2021/04/Mechanic-wheel-force-centre-transparent.png"
+                src="https://www.buythebook.ie/wp-content/uploads/2022/07/rachel-drury-6.jpg"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">
-                <h3 className="text-xl font-bold">Anto</h3>
-                <p className="font-semibold">Chief Executive Officer</p>
+                <h3 className="text-xl font-bold">Daiana Gomes</h3>
+                <p className="font-semibold">Support Officer</p>
               </div>
             </div>
             <div className="min-h-96 bg-gradient-to-t from-black to-zinc-400 relative flex justify-center rounded-lg">
@@ -122,7 +126,7 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://w7.pngwing.com/pngs/206/50/png-transparent-car-auto-mechanic-automobile-repair-shop-chevrolet-car-tshirt-car-automobile-repair-shop-thumbnail.png"
+                src="https://pyxis.nymag.com/v1/imgs/b4a/93c/7cf7653a2cdd61b31c81828d6c3d3ea13f-celeb-book-club-lede-1.1x.rsquare.w1400.jpg"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">
@@ -135,7 +139,7 @@ const AboutPage = () => {
                 alt="team member image"
                 className="bg-cover object-cover bg-center mix-blend-overlay h-full w-full"
                 height={200}
-                src="https://e7.pngegg.com/pngimages/689/7/png-clipart-car-automobile-repair-shop-auto-mechanic-motor-vehicle-service-car-car-automobile-repair-shop.png"
+                src="https://focus.independent.ie/thumbor/8-EOOn8L90HdaIhaCXV-27-il3s=/0x43:3112x2117/960x640/prod-mh-ireland/67f4806b-51cd-4133-abde-716583d2230d/c875f79f-489a-42d6-a403-37f933360ed4/67f4806b-51cd-4133-abde-716583d2230d.jpg"
                 width={270}
               />
               <div className="text-center text-white py-6 absolute bottom-2">

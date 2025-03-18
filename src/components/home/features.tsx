@@ -21,7 +21,7 @@ const Features = () => {
         const data = await res.json();
         console.log("Fetched data:", data);
 
-        const books: TBook[] = data?.data || []; // Ensure books is an array
+        const books: TBook[] = data?.data || [];
         setBooks(books);
       } catch (error) {
         console.error("Error fetching books:", error);
@@ -34,9 +34,9 @@ const Features = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <p>
+    <div className="p-0 m-0 bg-green-950">
+      <div className="px-8 py-10">
+        <p className="text xl ">
           The power to be found between the pages of a book is formidable,
           indeed. And these 80 inspiring quotes about books and importance of
           reading are here to remind you of that. From beloved bestsellers to
@@ -46,13 +46,13 @@ const Features = () => {
           They are the destination, and the journey. They are home.
         </p>
       </div>
-      <div>
+      <div className="px-6 py-8 justify-center">
         {loading ? (
           <p>Loading...</p>
         ) : (
           <h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {books.slice(0, 2).map((book) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {books.map((book) => (
                 <Books key={book.id} book={book} />
               ))}
             </div>
