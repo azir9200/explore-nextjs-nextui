@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row w-full min-h-[90vh] bg-gray-900 text-white p-2 lg:p-8">
+    <section className="flex flex-col lg:flex-row w-full min-h-[90vh] bg-green-900 text-white p-2 lg:p-8">
       {/* Text Section */}
       <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
         <h2 className="text-2xl justify-center text-center">
@@ -23,10 +23,10 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-6">
-          <button className="bg-[#0070f3] text-white px-6 py-3 text-lg rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-[#005bb5]">
+          <button className="bg-green-700 text-white px-6 py-3 text-lg rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-green-400">
             Make Appointment
           </button>
-          <button className="bg-white text-[#0070f3] px-6 py-3 text-lg rounded-lg border-2 border-[#0070f3] shadow-md transition duration-300 ease-in-out hover:bg-[#0070f3] hover:text-white">
+          <button className="bg-white text-[#06a034] px-6 py-3 text-lg rounded-lg border-2 border-[#0070f3] shadow-md transition duration-300 ease-in-out hover:bg-[#078631] hover:text-white">
             Contact Us
           </button>
         </div>
@@ -44,10 +44,10 @@ const HeroSection = () => {
             <div key={index} className="overflow-hidden rounded-lg shadow-lg">
               <Image
                 alt={`book-${index + 1}`}
-                height={300}
-                width={300}
                 className="w-full h-[200px] object-cover transition duration-300 ease-in-out transform hover:scale-105"
+                height={300}
                 src={src}
+                width={300}
               />
             </div>
           ))}

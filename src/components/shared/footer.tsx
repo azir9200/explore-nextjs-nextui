@@ -4,20 +4,20 @@ import { Link, Button } from "@nextui-org/react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-10 max-w-[h-screen]">
+    <footer className="bg-green-700  text-white py-10 max-w-[h-screen]">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Store Info */}
-        <div>
-          <h2 className="text-xl font-bold">📚 My Bookstore</h2>
-          <p className="text-sm mt-2 text-gray-400">
+        <div className="text-center ">
+          <h2 className="text-xl font-bold text-white">📚 My Bookstore</h2>
+          <p className="text-sm mt-2 text-white">
             Discover a world of books. From bestsellers to classics, we bring
             you the joy of reading.
           </p>
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h2 className="text-xl font-bold">Quick Links</h2>
+        <div className="text-center ">
+          <h2 className="text-xl  font-bold">Quick Links</h2>
           <ul className="mt-2 space-y-2">
             <li>
               <Link color="foreground" href="/shop">
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Info & Socials */}
-        <div>
+        <div className="text-center ">
           <h2 className="text-xl font-bold">Contact Us</h2>
           <p className="text-sm mt-2 text-gray-400">
             Email: support@mybookstore.com

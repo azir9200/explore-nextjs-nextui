@@ -1,4 +1,4 @@
-import { TServices } from "../../../types/index";
+
 
 export const getAllServices = async (type?: string) => {
   let fetchOptions = {};
@@ -39,7 +39,7 @@ export const getSingleService = async (id: string) => {
 };
 
 // createPost
-export const createPost = async (data: TServices) => {
+export const createPost = async (data: any) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/product`, {
     method: "POST",
     headers: {

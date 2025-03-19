@@ -17,33 +17,32 @@ import clsx from "clsx";
 import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/UI/theme-switch";
 import NavbarDropdown from "../UI/NavbarDropdown";
-import { useUser } from "@/src/context/user.provider";
-import { Book, Car } from "lucide-react";
+import { Book } from "lucide-react";
 
 export const Navbar = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="sticky" className="bg-green-950">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
+        <NavbarBrand as="li" className="gap-3 max-w-fit ">
           <NextLink
-            className="flex justify-start items-center gap-1 bg-green-900 rounded-md"
+            className="flex justify-start items-center gap-1  rounded-md"
             href="/"
           >
-            <Book className="font-bold text-yellow-800" />
-            <p className="text-xl text-white rounded-md pr-2 font-bold text-inherit">
+            <Book className="font-bold text-amber-500" />
+            <p className="text-xl text-amber-600 rounded-md pr-2 font-bold text-inherit">
               Golden Book
             </p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-4 text-amber-800 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  linkStyles({ color: "secondary" }),
+                  "data-[active=true]:text-amber-500 data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}
@@ -62,7 +61,10 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
-
+        <NavbarItem className="hidden sm:flex gap-2">
+          <NavbarDropdown />
+        </NavbarItem>
+        {/* 
         {user?.email ? (
           <NavbarItem className="hidden sm:flex gap-2">
             <NavbarDropdown />
@@ -71,22 +73,23 @@ export const Navbar = () => {
           <NavbarItem className="hidden sm:flex gap-2">
             <Link href="/login">Login</Link>
           </NavbarItem>
-        )}
+        )} */}
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <ThemeSwitch />
-        <NavbarMenuToggle />
+        <ThemeSwitch className="text-amber-700" />
+        <NavbarMenuToggle className="text-amber-600 font-extrabold" />
       </NavbarContent>
 
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+      <NavbarMenu className="bg-green-950 text-white">
+        <div className="mx-4 mt-2 text-amber-600 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
+                className="text-white"
                 color={
                   index === 2
-                    ? "primary"
+                    ? "warning"
                     : index === siteConfig.navMenuItems.length - 1
                       ? "danger"
                       : "foreground"

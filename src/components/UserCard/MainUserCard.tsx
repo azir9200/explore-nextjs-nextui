@@ -5,7 +5,10 @@ import { IUser } from "@/src/types";
 export default function MainUserCard({ user }: { user: IUser | null }) {
   return (
     <div className="flex items-center gap-2">
-      <Avatar alt="img" src={user?.profilePhoto as string} />
+      <Avatar
+        alt="img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyCixyM2urliFC1w0DyNMJpBRMOXFizr3FR8aRIFfcDUGBzEaXcV6mt4gVWRqGAqqu4PI&usqp=CAU"
+      />
       <div>
         <div className="flex items-center gap-2">
           <h4 className="font-poppinsRegular">{user?.name}</h4>

@@ -24,7 +24,6 @@ const LoginPage = () => {
 
   const redirect = searchParams.get("redirect");
 
-  // const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsPending(true);
     const res = await loginUser(data);
@@ -55,9 +54,9 @@ const LoginPage = () => {
   return (
     <>
       {isPending && <Loading />}
-      <div className="flex h-[calc(100vh-200px)] w-full flex-col items-center justify-center ">
-        <h3 className="my-2 text-2xl font-bold">Login with Car Services</h3>
-        <p className="mb-4">Welcome Back! Let&lsquo;s Get Started</p>
+      <div className="flex h-[100vh] bg-green-950 w-full flex-col items-center justify-center ">
+        <h3 className="my-2 text-2xl font-bold">Login with Golden Book</h3>
+        <p className="mb-4">Welcome Back ! Let&lsquo;s Get Started</p>
         <div className="w-[35%]">
           <FXForm
             resolver={zodResolver(loginValidationSchema)}
@@ -79,7 +78,10 @@ const LoginPage = () => {
             </Button>
           </FXForm>
           <div className="text-center">
-            Don&lsquo;t have account ? <Link href={"/register"}>Register</Link>
+            Don&lsquo;t have account ?{" "}
+            <Link className="text-amber-700" href={"/register"}>
+              Register
+            </Link>
           </div>
         </div>
       </div>

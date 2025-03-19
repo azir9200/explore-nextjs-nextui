@@ -16,7 +16,7 @@ import { useUser } from "@/src/context/user.provider";
 export default function NavbarDropdown() {
   const router = useRouter();
 
-  const { user, setIsLoading: userLoading } = useUser();
+  const { setIsLoading: userLoading } = useUser();
 
   const handleLogout = () => {
     logout();
@@ -28,9 +28,12 @@ export default function NavbarDropdown() {
   };
 
   return (
-    <Dropdown>
+    <Dropdown className="text-amber-500">
       <DropdownTrigger>
-        <Avatar className="cursor-pointer" src={user?.profilePhoto} />
+        <Avatar
+          className="cursor-pointer"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyCixyM2urliFC1w0DyNMJpBRMOXFizr3FR8aRIFfcDUGBzEaXcV6mt4gVWRqGAqqu4PI&usqp=CAU"
+        />
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem

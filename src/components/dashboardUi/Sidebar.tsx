@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 "use client";
@@ -54,12 +53,12 @@ export default function Sidebar() {
     <>
       {isSidebarOpen && (
         <div
-          className="fixed md:hidden inset-0 bg-white/10 dark:bg-black/10 backdrop-blur-sm z-40"
+          className="fixed md:hidden inset-0 bg-green-950/10 dark:bg-green-950 backdrop-blur-sm z-40"
           onClick={() => toggleSidebar(false)}
         />
       )}
       <div
-        className={`bg-black dark:bg-white/10 backdrop-blur-sm text-white px-5 py-4 h-[93.5dvh] transition-all duration-[250ms] rounded-[40px] ${
+        className={`bg-green-950 dark:bg-white/10 backdrop-blur-sm text-white px-5 py-4 h-[93.5dvh] transition-all duration-[250ms] rounded-[40px] ${
           isSidebarExpanded ? "w-64" : "w-[70px]"
         } fixed md:sticky md:top-5 z-50 ${
           isSidebarOpen &&
@@ -90,13 +89,6 @@ export default function Sidebar() {
           </MainTooltip>
           <div>
             <div className="flex items-center gap-4 sm:gap-3 flex-wrap-reverse mt-2">
-              <Link href={"/"}>
-                <h1
-                  className={`ltr:font-poppinsRegular ${isSidebarExpanded ? "md:block" : "md:hidden"} text-white`}
-                >
-                  MyCar
-                </h1>
-              </Link>
               <span
                 className="cursor-pointer md:hidden"
                 onClick={() => toggleSidebar(false)}
@@ -114,9 +106,9 @@ export default function Sidebar() {
                     className={`${pathname === item.href ? "flex items-center gap-2 text-amber-500" : "flex items-center gap-2"}`}
                     href={item.href}
                   >
-                    <MainTooltip key={index} content={t(item.title)}>
+                    {/* <MainTooltip key={index} content={t(item.title)}>
                       <span className="cursor-pointer">{item.Icon}</span>
-                    </MainTooltip>
+                    </MainTooltip> */}
                     <span
                       className={`ltr:font-poppinsRegular ${
                         !isSidebarExpanded && "md:hidden"

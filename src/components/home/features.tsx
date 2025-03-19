@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import Books from "../books/books";
+
 import { TBook } from "@/src/types";
 
 const Features = () => {
@@ -19,9 +21,11 @@ const Features = () => {
         }
 
         const data = await res.json();
+
         console.log("Fetched data:", data);
 
         const books: TBook[] = data?.data || [];
+
         setBooks(books);
       } catch (error) {
         console.error("Error fetching books:", error);
@@ -36,7 +40,7 @@ const Features = () => {
   return (
     <div className="p-0 m-0 bg-green-950">
       <div className="px-8 py-10">
-        <p className="text xl ">
+        <p className="text xl text-white ">
           The power to be found between the pages of a book is formidable,
           indeed. And these 80 inspiring quotes about books and importance of
           reading are here to remind you of that. From beloved bestsellers to
@@ -51,7 +55,7 @@ const Features = () => {
           <p>Loading...</p>
         ) : (
           <h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-green-800">
               {books.map((book) => (
                 <Books key={book.id} book={book} />
               ))}
@@ -61,7 +65,7 @@ const Features = () => {
       </div>
       {/* Show All Button */}
       <button
-        className="bg-slate-400 mt-4 px-6 py-2 rounded-r-full rounded-bl-sm"
+        className="bg-green-900 mt-4 px-6 py-2 rounded-r-full rounded-bl-sm justify-center items-center text-center "
         onClick={() => setShowAll(!showAll)}
       >
         {showAll ? "Show Less" : "Read more.."}

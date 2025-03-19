@@ -50,9 +50,9 @@ export default function RegisterPage() {
     <Suspense fallback={<Loading />}>
       <RedirectAfterRegistration />
 
-      <div className="flex w-full min-h-screen flex-col items-center justify-center  bg-cover bg-center px-4">
-        <div className="w-full max-w-md p-6 md:p-8 lg:p-10 rounded-md border backdrop-blur-md bg-black/10 text-center">
-          <h3 className="mb-6 text-4xl font-bold">Sign Up</h3>
+      <div className="flex w-full bg-green-950 min-h-screen flex-col items-center justify-center  bg-cover bg-center px-4">
+        <div className="w-full max-w-md md:p-8 lg:p-10 rounded-md  backdrop-blur-md text-center">
+          <h3 className="mb-2 text-2xl font-bold">Sign Up</h3>
           <FXForm
             //! Only for development
             // defaultValues={{
@@ -98,7 +98,10 @@ export default function RegisterPage() {
             </Button>
           </FXForm>
           <div className="text-center">
-            Already have an account ? <Link href={"/login"}>Login</Link>
+            Already have an account ?{" "}
+            <Link className="text-amber-600" href={"/login"}>
+              Login
+            </Link>
           </div>
         </div>
       </div>

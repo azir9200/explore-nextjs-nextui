@@ -19,7 +19,7 @@ const Sidebar = () => {
             alt="profile"
             className="w-full h-full object-cover rounded-md"
             height={330}
-            src={user?.profilePhoto as string}
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyCixyM2urliFC1w0DyNMJpBRMOXFizr3FR8aRIFfcDUGBzEaXcV6mt4gVWRqGAqqu4PI&usqp=CAU"
             width={330}
           />
         </div>

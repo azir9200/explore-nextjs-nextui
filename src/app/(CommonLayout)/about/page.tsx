@@ -4,18 +4,18 @@ import Container from "@/src/components/UI/Container";
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className="bg-green-950">
       <Container>
         {/* page header */}
         <div className="flex flex-col items-center text-center gap-4 font-medium py-14 md:py-16 lg:py-20">
-          <span className="text-sm font-semibold border rounded-full px-3 py-1">
+          <span className="text-sm font-semibold border rounded-full px-3 py-1 text-white">
             About Us
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-slate-50 pt-2 max-w-screen-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-slate-50 pt-2 max-w-screen-lg text-white">
             Golden Book is bringing to you get access easily to your favourite
             book.
           </h1>
-          <p className="font-medium md:text-lg">
+          <p className="font-medium md:text-lg text-white">
             Stop struggling with outdated platforms. Its time to start savoring
             the joy of sharing.
           </p>
@@ -54,17 +54,17 @@ const AboutPage = () => {
         {/* our mission section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-between py-16">
           <div className="md:col-span-2">
-            <h1 className="text-slate-900 dark:text-slate-50 text-2xl md:text-3xl font-extrabold mb-4">
+            <h1 className="text-white  dark:text-slate-50 text-2xl md:text-3xl font-extrabold mb-4">
               Your Vision
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 font-medium">
+            <p className="text-white bg-green-950 dark:text-slate-300 font-medium">
               Bookshops are open, inclusive, welcoming spaces for everyone. Amid
-              growing polarisation and censorship, this campaign will give voice
+              growing polarizations and censorship, this campaign will give voice
               to booksellers from across the RISE network who go above and
               beyond to ensure that their bookshops remain welcoming and
               inclusive spaces for all.
             </p>
-            <p className="text-slate-600 dark:text-slate-300 font-medium">
+            <p className= "bg-green-900 text-white dark:text-slate-300 font-medium">
               Our mission is to inspire a love for reading by offering a diverse
               collection of books that ignite imagination, expand knowledge, and
               connect readers to new worlds. We strive to create a welcoming and
@@ -72,7 +72,7 @@ const AboutPage = () => {
               learn, and grow through the power of literature
             </p>
           </div>
-          <div className="bg-primary dark:bg-primary-50 text-white p-6 rounded-md">
+          <div className="bg-green-950 dark:bg-primary-50 text-white p-6 rounded-md">
             <h1 className="text-2xl md:text-3xl font-extrabold mb-4">
               Our Mission
             </h1>
@@ -88,7 +88,7 @@ const AboutPage = () => {
         </div>
         {/* our team section */}
         <div className="py-8 md:py-12">
-          <h1 className="text-slate-900 dark:text-slate-50 text-3xl md:text-4xl font-extrabold mb-4 text-center">
+          <h1 className="text-white dark:text-slate-50 text-3xl md:text-4xl font-extrabold mb-4 text-center">
             Meet Our Team
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-lg md:text-xl font-medium text-center">
