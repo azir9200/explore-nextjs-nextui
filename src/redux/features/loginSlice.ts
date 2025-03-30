@@ -21,5 +21,6 @@ const loginSlice = createSlice({
     },
   },
 });
+
 export const { setName, setEmail, setPassword } = loginSlice.actions;
 export default loginSlice.reducer;

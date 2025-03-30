@@ -11,8 +11,8 @@ const AboutPage = () => {
           <span className="text-sm font-semibold border rounded-full px-3 py-1 text-white">
             About Us
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-slate-50 pt-2 max-w-screen-lg text-white">
-            Golden Book is bringing to you get access easily to your favourite
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold dark:text-slate-50 pt-2 max-w-screen-lg text-white">
+            Golden Book is bringing to you get access easily to your favorite
             book.
           </h1>
           <p className="font-medium md:text-lg text-white">
@@ -59,12 +59,12 @@ const AboutPage = () => {
             </h1>
             <p className="text-white bg-green-950 dark:text-slate-300 font-medium">
               Bookshops are open, inclusive, welcoming spaces for everyone. Amid
-              growing polarizations and censorship, this campaign will give voice
-              to booksellers from across the RISE network who go above and
+              growing polarizations and censorship, this campaign will give
+              voice to booksellers from across the RISE network who go above and
               beyond to ensure that their bookshops remain welcoming and
               inclusive spaces for all.
             </p>
-            <p className= "bg-green-900 text-white dark:text-slate-300 font-medium">
+            <p className="bg-green-900 text-white dark:text-slate-300 font-medium">
               Our mission is to inspire a love for reading by offering a diverse
               collection of books that ignite imagination, expand knowledge, and
               connect readers to new worlds. We strive to create a welcoming and

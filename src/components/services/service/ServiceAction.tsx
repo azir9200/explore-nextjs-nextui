@@ -1,5 +1,3 @@
-
-
 export const getAllServices = async (type?: string) => {
   let fetchOptions = {};
 

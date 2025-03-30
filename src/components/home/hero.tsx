@@ -16,7 +16,8 @@ const Hero = () => {
         <Button
           as="a"
           className="mt-6 bg-green-300 text-amber-800 font-semibold"
-          href="http://localhost:3000/shop"
+          href="https://car-refresh-service-87ur6gbfy-azir-uddins-projects.vercel.app/shop"
+          // href="http://localhost:3000/shop"
           radius="full"
           size="lg"
         >

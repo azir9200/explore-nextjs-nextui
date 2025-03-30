@@ -95,11 +95,11 @@ const BookExplore = () => {
             className="bg-green-900 rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105"
           >
             <Image
-              src={article.image}
               alt={article.title}
-              width={400}
-              height={250}
               className="w-full h-48 object-cover"
+              height={250}
+              src={article.image}
+              width={400}
             />
             <div className="p-5">
               <h3 className="text-xl font-semibold text-white">

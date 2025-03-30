@@ -21,5 +21,6 @@ const registerSlice = createSlice({
     },
   },
 });
+
 export const { setName, setEmail, setPassword } = registerSlice.actions;
 export default registerSlice.reducer;

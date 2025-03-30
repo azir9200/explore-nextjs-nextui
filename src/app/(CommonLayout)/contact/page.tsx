@@ -8,7 +8,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaFacebook,
-  FaTwitter,
   FaInstagram,
   FaTwitterSquare,
 } from "react-icons/fa";
@@ -37,12 +36,12 @@ export default function Contact() {
               Send us a Message
             </h2>
             <form className="space-y-4">
-              <Input type="text" placeholder="Your Name" className="w-full" />
-              <Input type="email" placeholder="Your Email" className="w-full" />
+              <Input className="w-full" placeholder="Your Name" type="text" />
+              <Input className="w-full" placeholder="Your Email" type="email" />
               <Textarea
+                className="w-full"
                 placeholder="Your Message"
                 rows={4}
-                className="w-full"
               />
               <Button className="w-full bg-green-600 text-white hover:bg-green-950">
                 Send Message
@@ -67,13 +66,13 @@ export default function Contact() {
 
             {/* Social Media */}
             <div className="mt-4 flex gap-4 text-center">
-              <Link href="#" className="text-blue-600 text-2xl">
+              <Link className="text-blue-600 text-2xl" href="#">
                 <FaFacebook />
               </Link>
-              <Link href="#" className="text-blue-400 text-2xl">
+              <Link className="text-blue-400 text-2xl" href="#">
                 <FaTwitterSquare />
               </Link>
-              <Link href="#" className="text-pink-500 text-2xl">
+              <Link className="text-pink-500 text-2xl" href="#">
                 <FaInstagram />
               </Link>
             </div>

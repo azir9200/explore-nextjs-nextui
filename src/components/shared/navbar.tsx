@@ -23,7 +23,7 @@ export const Navbar = () => {
   // const { user } = useUser();
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="bg-green-950">
+    <NextUINavbar className="bg-green-950" maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit ">
           <NextLink
@@ -42,7 +42,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "secondary" }),
-                  "data-[active=true]:text-amber-500 data-[active=true]:font-medium"
+                  "data-[active=true]:text-amber-500 data-[active=true]:font-medium",
                 )}
                 color="foreground"
                 href={item.href}

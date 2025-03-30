@@ -2,18 +2,20 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 "use client";
 
-import { useUser } from "@/src/context/user.provider";
-import { useSidebarStore } from "@/src/stores/useSidebar";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { logout } from "../services/service/AuthService";
-import ExpandRightIcon from "@/src/assets/icons/fill/ExpandRight";
-import MainTooltip from "./MainTooltip";
 import { useTranslation } from "react-i18next";
-
 import Link from "next/link";
-import CloseIcon from "@/src/assets/icons/fill/Close";
+
+import { logout } from "../services/service/AuthService";
 import { AdminSideBarItem, UserSideBarItem } from "../constants/sideBarItem";
+
+import MainTooltip from "./MainTooltip";
+
+import ExpandRightIcon from "@/src/assets/icons/fill/ExpandRight";
+import CloseIcon from "@/src/assets/icons/fill/Close";
+import { useSidebarStore } from "@/src/stores/useSidebar";
+import { useUser } from "@/src/context/user.provider";
 import SigninIcon from "@/src/assets/icons/fill/Signin";
 
 export default function Sidebar() {

@@ -1,19 +1,19 @@
 "use client";
 
-import FXForm from "@/src/components/form/FXForm";
-
-import FXInput from "@/src/components/form/FXInput";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
-import loginValidationSchema from "@/src/components/schemas/login.schema";
 import { FieldValues, SubmitHandler } from "react-hook-form";
-import { loginUser } from "@/src/components/services/service/AuthService";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useUser } from "@/src/context/user.provider";
 import { useEffect, useState } from "react";
-import Loading from "@/src/components/UI/Loading";
 import { toast } from "sonner";
+
+import { loginUser } from "@/src/components/services/service/AuthService";
+import { useUser } from "@/src/context/user.provider";
+import Loading from "@/src/components/UI/Loading";
+import FXInput from "@/src/components/form/FXInput";
+import loginValidationSchema from "@/src/components/schemas/login.schema";
+import FXForm from "@/src/components/form/FXForm";
 
 const LoginPage = () => {
   const searchParams = useSearchParams();

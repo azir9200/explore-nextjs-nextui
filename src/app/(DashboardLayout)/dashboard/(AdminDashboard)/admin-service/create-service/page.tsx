@@ -7,6 +7,7 @@ import FXInput from "@/src/components/form/FXInput";
 
 const CreateService = () => {
   const methods = useForm();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { handleSubmit } = methods;
 
   return (

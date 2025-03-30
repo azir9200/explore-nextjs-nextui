@@ -9,9 +9,9 @@ const Books: React.FC<BookProps> = ({ book }) => {
     <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-5 transition-transform transform hover:scale-105 hover:shadow-xl">
       {/* Book Image */}
       <img
+        alt={book.title}
         className="w-full h-64 object-cover rounded-lg"
         src={book?.image}
-        alt={book.title}
       />
 
       {/* Book Info */}

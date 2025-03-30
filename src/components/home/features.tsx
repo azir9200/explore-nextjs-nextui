@@ -14,19 +14,27 @@ const Features = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
+        // const res = await fetch(
+        //   "https://golden-book-store-hvrhzwdla-azir-uddins-projects.vercel.app/api/v1/book",
+        //   {
+        //     method: "GET",
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     mode: "cors",
+        //   }
+        // );
+
         const res = await fetch("http://localhost:5000/api/v1/book");
+
+        console.log(res);
 
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
 
         const data = await res.json();
-
-        console.log("Fetched data:", data);
-
-        const books: TBook[] = data?.data || [];
-
-        setBooks(books);
+        setBooks(data?.data || []);
       } catch (error) {
         console.error("Error fetching books:", error);
       } finally {
@@ -37,39 +45,46 @@ const Features = () => {
     fetchBooks();
   }, []);
 
+  // Show 6 books initially, toggle to show all
+  const displayedBooks = showAll ? books : books.slice(0, 6);
+
   return (
     <div className="p-0 m-0 bg-green-950">
+      {/* Header Section */}
       <div className="px-8 py-10">
-        <p className="text xl text-white ">
+        <p className="text-xl text-white leading-relaxed">
           The power to be found between the pages of a book is formidable,
-          indeed. And these 80 inspiring quotes about books and importance of
-          reading are here to remind you of that. From beloved bestsellers to
+          indeed. And these 80 inspiring quotes about books and the importance
+          of reading are here to remind you of that. From beloved bestsellers to
           iconic celebrities, these quotes exemplify the benefits of reading and
-          of a good books to comfort, challenge, and inspire you. For, as author
-          Anna Quindlen says, Books are the plane, and the train, and the road.
-          They are the destination, and the journey. They are home.
+          of a good book to comfort, challenge, and inspire you.
         </p>
       </div>
-      <div className="px-6 py-8 justify-center">
+
+      {/* Books Display Section */}
+      <div className="px-6 py-8">
         {loading ? (
-          <p>Loading...</p>
+          <p className="text-white text-center">Loading...</p>
         ) : (
-          <h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-green-800">
-              {books.map((book) => (
-                <Books key={book.id} book={book} />
-              ))}
-            </div>
-          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-green-800 p-6 rounded-lg">
+            {displayedBooks.map((book) => (
+              <Books key={book._id} book={book} />
+            ))}
+          </div>
         )}
       </div>
-      {/* Show All Button */}
-      <button
-        className="bg-green-900 mt-4 px-6 py-2 rounded-r-full rounded-bl-sm justify-center items-center text-center "
-        onClick={() => setShowAll(!showAll)}
-      >
-        {showAll ? "Show Less" : "Read more.."}
-      </button>
+
+      {/* Show More/Less Button */}
+      {books.length > 6 && (
+        <div className="flex justify-center mt-4">
+          <button
+            className="bg-green-900 px-6 py-2 rounded-full text-white hover:bg-green-700 transition-all duration-300"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Show Less" : "Read more.."}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
