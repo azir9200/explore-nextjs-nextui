@@ -5,7 +5,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 };
 
 export type TBook = {
-  _id: string;
+  id: string;
   title: string;
   genre: string;
   image: string;

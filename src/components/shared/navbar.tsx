@@ -18,9 +18,10 @@ import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/UI/theme-switch";
 import NavbarDropdown from "../UI/NavbarDropdown";
 import { Book } from "lucide-react";
+import { useUser } from "@/src/context/user.provider";
 
 export const Navbar = () => {
-  // const { user } = useUser();
+  const { user } = useUser();
 
   return (
     <NextUINavbar className="bg-green-950" maxWidth="xl" position="sticky">
@@ -64,7 +65,7 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <NavbarDropdown />
         </NavbarItem>
-        {/* 
+        
         {user?.email ? (
           <NavbarItem className="hidden sm:flex gap-2">
             <NavbarDropdown />
@@ -73,7 +74,7 @@ export const Navbar = () => {
           <NavbarItem className="hidden sm:flex gap-2">
             <Link href="/login">Login</Link>
           </NavbarItem>
-        )} */}
+        )}
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">

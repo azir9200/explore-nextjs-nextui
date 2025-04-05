@@ -4,7 +4,7 @@ import { SearchIcon } from "../../icons";
 
 export default function Landing() {
   return (
-    <div className="h-[calc(100vh-64px)] bg-[url('/glass.jpg')] bg-cover bg-center">
+    <div className="h-[calc(90vh-64px)] bg-[url('https://www.marketplace.org/wp-content/uploads/2024/06/GettyImages-1453081662.jpg?w=350')] bg-cover bg-center">
       <div className="pt-32 max-w-xl flex-1 mx-auto">
         <form className="flex-1">
           <Input
